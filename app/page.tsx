@@ -4,7 +4,12 @@ import { HeroTitle } from "@/components/landing/hero-title";
 import { LineFieldBackground } from "@/components/landing/line-field-bg";
 import { SignatureMark } from "@/components/landing/signature-mark";
 import staticContributors from "@/lib/contributors-data.json";
-import type { ContributorInfo } from "@/lib/contributors-data.json";
+
+type ContributorInfo = {
+	login: string;
+	avatar_url: string;
+	html_url: string;
+};
 
 const contributors = staticContributors as ContributorInfo[];
 

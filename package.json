@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
-"scripts": {
+  "scripts": {
     "postinstall": "fumadocs-mdx",
     "dev": "next dev --port 3000",
     "build": "next build",
@@ -18,8 +18,8 @@
     "@ai-sdk/openai": "^3.0.29",
     "@ai-sdk/openai-compatible": "^2.0.29",
     "@ai-sdk/react": "^3.0.106",
-    "@better-auth/utils": "latest",
-    "@better-fetch/fetch": "latest",
+    "@better-auth/utils": "*",
+    "@better-fetch/fetch": "*",
     "@hookform/resolvers": "^5.2.1",
     "@openrouter/ai-sdk-provider": "^2.2.5",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -63,8 +63,8 @@
     "embla-carousel-react": "^8.6.0",
     "feed": "^5.2.0",
     "framer-motion": "^12.23.12",
-    "fumadocs-core": "16.7.9",
-    "fumadocs-mdx": "^14.2.8",
+    "fumadocs-core": "^16.8.4",
+    "fumadocs-mdx": "^14.3.1",
     "fumadocs-typescript": "^5.2.1",
     "fumadocs-ui": "16.7.9",
     "geist": "^1.7.0",
@@ -98,7 +98,7 @@
     "shiki": "^4.0.0",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "latest",
+    "tailwindcss-animate": "*",
     "typesense": "^3.0.2",
     "typesense-fumadocs-adapter": "^0.3.0",
     "unist-util-visit": "^5.1.0",
@@ -107,7 +107,7 @@
   },
   "devDependencies": {
     "@react-grab/mcp": "^0.1.15",
-    "@tailwindcss/postcss": "latest",
+    "@tailwindcss/postcss": "*",
     "@types/hast": "^3.0.4",
     "@types/js-beautify": "^1.14.3",
     "@types/mdx": "^2.0.13",
@@ -120,8 +120,8 @@
     "remark-frontmatter": "^5.0.0",
     "remark-preset-lint-consistent": "^6.0.1",
     "remark-preset-lint-recommended": "^7.0.1",
-    "tailwindcss": "latest",
+    "tailwindcss": "*",
     "tw-animate-css": "^1.3.7",
-    "typescript": "latest"
+    "typescript": "*"
   }
 }

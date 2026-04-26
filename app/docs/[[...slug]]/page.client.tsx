@@ -14,7 +14,6 @@ import {
 import type { MouseEventHandler } from "react";
 import {
 	useEffect,
-	useEffectEvent,
 	useRef,
 	useState,
 	useTransition,
@@ -26,10 +25,12 @@ function useCopyButton(
 ): [checked: boolean, onClick: MouseEventHandler] {
 	const [checked, setChecked] = useState(false);
 	const timeoutRef = useRef<number | null>(null);
+	const onCopyRef = useRef(onCopy);
+	onCopyRef.current = onCopy;
 
-	const onClick: MouseEventHandler = useEffectEvent(() => {
+	const onClick: MouseEventHandler = (e) => {
 		if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
-		const res = Promise.resolve(onCopy());
+		const res = Promise.resolve(onCopyRef.current());
 
 		void res.then(() => {
 			setChecked(true);
@@ -37,7 +38,7 @@ function useCopyButton(
 				setChecked(false);
 			}, 1500);
 		});
-	});
+	};
 
 	useEffect(() => {
 		return () => {

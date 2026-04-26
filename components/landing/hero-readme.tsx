@@ -9,8 +9,13 @@ import {
 	useRef,
 	useState,
 } from "react";
-import type { ContributorInfo } from "@/lib/contributors-data.json";
 import staticContributors from "@/lib/contributors-data.json";
+
+type ContributorInfo = {
+	login: string;
+	avatar_url: string;
+	html_url: string;
+};
 import { cn } from "@/lib/utils";
 import {
 	DatabaseSection,

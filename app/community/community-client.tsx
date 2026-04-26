@@ -202,7 +202,7 @@ const platforms = [
 	},
 ];
 
-function CommunityHero({ stats }: { stats: CommunityStats }) {
+function CommunityHero({ stats }: { stats: { npmDownloads: number; npmWeeklyHistory: number[]; githubStars: number; contributors: number; discordMembers: number } }) {
 	return (
 		<motion.div
 			initial={false}
@@ -386,7 +386,7 @@ function PlatformCard({
 	);
 }
 
-export function CommunityPageClient({ stats }: { stats: CommunityStats }) {
+export function CommunityPageClient({ stats }: { stats: { npmDownloads: number; npmWeeklyHistory: number[]; githubStars: number; contributors: number; discordMembers: number } }) {
 	return (
 		<div className="relative min-h-dvh pt-14 lg:pt-0">
 			<div className="relative text-foreground">

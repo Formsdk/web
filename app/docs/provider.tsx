@@ -1,13 +1,8 @@
 "use client";
 
 import { RootProvider } from "fumadocs-ui/provider/next";
-import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 import { createContext, use } from "react";
-
-const SearchDialog = dynamic(() => import("@/components/search-dialog"), {
-	ssr: false,
-});
 
 export interface PageEntry {
 	name: string;
@@ -29,13 +24,7 @@ export function DocsProvider({
 }) {
 	return (
 		<PagesContext value={pages}>
-			<RootProvider
-				search={{
-					SearchDialog,
-				}}
-			>
-				{children}
-			</RootProvider>
+			<RootProvider>{children}</RootProvider>
 		</PagesContext>
 	);
 }
