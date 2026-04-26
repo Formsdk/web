@@ -55,9 +55,6 @@ export default async function ChangelogPage() {
 				next: { revalidate: 3600 },
 				headers: {
 					Accept: "application/vnd.github.v3+json",
-					...(process.env.GITHUB_TOKEN && {
-						Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-					}),
 				},
 			},
 		);

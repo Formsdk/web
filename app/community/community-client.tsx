@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Footer from "@/components/landing/footer";
 import { HalftoneBackground } from "@/components/landing/halftone-bg";
-import type { CommunityStats } from "@/lib/community-stats";
 
 // Icons - using text-foreground for theme support
 const GitHubIcon = ({ className }: { className?: string }) => (

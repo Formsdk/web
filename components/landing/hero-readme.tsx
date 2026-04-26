@@ -9,7 +9,8 @@ import {
 	useRef,
 	useState,
 } from "react";
-import type { ContributorInfo } from "@/lib/community-stats";
+import type { ContributorInfo } from "@/lib/contributors-data.json";
+import staticContributors from "@/lib/contributors-data.json";
 import { cn } from "@/lib/utils";
 import {
 	DatabaseSection,

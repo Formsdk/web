@@ -3,11 +3,19 @@ import { HeroReadMe } from "@/components/landing/hero-readme";
 import { HeroTitle } from "@/components/landing/hero-title";
 import { LineFieldBackground } from "@/components/landing/line-field-bg";
 import { SignatureMark } from "@/components/landing/signature-mark";
-import { getCommunityStats, getContributors } from "@/lib/community-stats";
+import staticContributors from "@/lib/contributors-data.json";
+import type { ContributorInfo } from "@/lib/contributors-data.json";
+
+const contributors = staticContributors as ContributorInfo[];
+
+const communityStats = {
+	npmDownloads: 2_000_000,
+	npmWeeklyHistory: [] as number[],
+	githubStars: 26_000,
+	contributors: contributors.length,
+};
 
 export default async function HomePage() {
-	const contributors = getContributors();
-	const communityStats = await getCommunityStats();
 
 	return (
 		<div id="hero" className="relative pt-[45px] lg:pt-0">

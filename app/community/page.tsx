@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { getCommunityStats } from "@/lib/community-stats";
 import { createMetadata } from "@/lib/metadata";
 import { CommunityPageClient } from "./community-client";
 
@@ -9,10 +8,14 @@ export const metadata: Metadata = createMetadata({
 		"Join the Better Auth community — contributors, Discord members, and ecosystem stats.",
 });
 
-export const revalidate = 21600; // Revalidate every 6 hours
-
 export default async function CommunityPage() {
-	const stats = await getCommunityStats();
+	const stats = {
+		npmDownloads: 2_000_000,
+		npmWeeklyHistory: [] as number[],
+		githubStars: 26_000,
+		contributors: 200,
+		discordMembers: 10_000,
+	};
 
 	return <CommunityPageClient stats={stats} />;
 }
